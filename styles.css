@@ -54,7 +54,7 @@ h1 {
 
 h2 {
   font-size: clamp(1.4rem, 3vw, 2rem);
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 p,
@@ -80,6 +80,13 @@ blockquote {
   font-size: 1.1rem;
 }
 
+.contact-line,
+.trust-line {
+  margin: 0.7rem 0 0;
+  font-weight: 600;
+  color: #111827;
+}
+
 .hero-image {
   min-height: 260px;
   object-fit: cover;
@@ -89,7 +96,7 @@ blockquote {
   display: inline-block;
   text-decoration: none;
   border-radius: 0.65rem;
-  padding: 0.85rem 1.1rem;
+  padding: 0.9rem 1.1rem;
   font-weight: 700;
 }
 
@@ -101,6 +108,11 @@ blockquote {
 .btn-whatsapp:hover,
 .btn-whatsapp:focus-visible {
   background: var(--wa-dark);
+}
+
+.section-subtitle {
+  margin-top: 0;
+  margin-bottom: 1.1rem;
 }
 
 .product-grid {
@@ -122,7 +134,8 @@ blockquote {
 .price {
   margin: 0;
   color: #111827;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.06rem;
 }
 
 .check-list,
@@ -150,6 +163,22 @@ blockquote {
   padding: 0.7rem 0.9rem;
   background: #fff;
   border-radius: 0.4rem;
+}
+
+.two-col {
+  display: grid;
+  gap: 1rem;
+}
+
+.mini-card {
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background: #f9fafb;
+}
+
+.mini-card h3 {
+  margin-bottom: 0.4rem;
 }
 
 .cta {
@@ -182,6 +211,11 @@ blockquote {
 
   .product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .two-col {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
   }
 }
 
