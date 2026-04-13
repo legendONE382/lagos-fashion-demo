@@ -1,0 +1,260 @@
+:root {
+  --bg: #ffffff;
+  --text: #101010;
+  --muted: #4b5563;
+  --wa: #25d366;
+  --wa-dark: #1da851;
+  --border: #e5e7eb;
+  --card-bg: #fafafa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+img {
+  width: 100%;
+  display: block;
+  border-radius: 0.8rem;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.section-alt {
+  background: #f8fafc;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 0.7rem;
+}
+
+p,
+li,
+blockquote {
+  color: var(--muted);
+}
+
+.eyebrow {
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.8rem;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero-copy {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.contact-line,
+.trust-line {
+  margin: 0.7rem 0 0;
+  font-weight: 600;
+  color: #111827;
+}
+
+.hero-image {
+  min-height: 260px;
+  object-fit: cover;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.65rem;
+  padding: 0.9rem 1.1rem;
+  font-weight: 700;
+}
+
+.btn-whatsapp {
+  background: var(--wa);
+  color: #fff;
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+  background: var(--wa-dark);
+}
+
+.section-subtitle {
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+}
+
+.product-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  border-radius: 0.9rem;
+  padding: 0.8rem;
+}
+
+.card h3 {
+  margin: 0.8rem 0 0.3rem;
+}
+
+.price {
+  margin: 0;
+  color: #111827;
+  font-weight: 700;
+  font-size: 1.06rem;
+}
+
+.check-list,
+.steps {
+  padding-left: 1.2rem;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.social-proof-stat {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.testimonials {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.testimonials blockquote {
+  margin: 0;
+  border-left: 4px solid var(--wa);
+  padding: 0.7rem 0.9rem;
+  background: #fff;
+  border-radius: 0.4rem;
+}
+
+.two-col {
+  display: grid;
+  gap: 1rem;
+}
+
+.mini-card {
+  border: 1px solid var(--border);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  background: #f9fafb;
+}
+
+.mini-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.cta {
+  text-align: center;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: var(--wa);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.floating-whatsapp:hover,
+.floating-whatsapp:focus-visible {
+  background: var(--wa-dark);
+}
+
+
+
+.contact-line a {
+  color: #111827;
+  text-decoration: none;
+}
+
+.contact-line a:hover,
+.contact-line a:focus-visible {
+  text-decoration: underline;
+}
+
+.urgency-line {
+  margin: 0.7rem 0 0;
+  color: #b45309;
+  font-weight: 700;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.4rem 0 2.2rem;
+  text-align: center;
+  background: #fff;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #111827;
+  font-weight: 700;
+}
+
+@media (min-width: 720px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .two-col {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+@media (min-width: 980px) {
+  .product-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
