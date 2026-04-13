@@ -204,6 +204,40 @@ blockquote {
   background: var(--wa-dark);
 }
 
+
+
+.contact-line a {
+  color: #111827;
+  text-decoration: none;
+}
+
+.contact-line a:hover,
+.contact-line a:focus-visible {
+  text-decoration: underline;
+}
+
+.urgency-line {
+  margin: 0.7rem 0 0;
+  color: #b45309;
+  font-weight: 700;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 1.4rem 0 2.2rem;
+  text-align: center;
+  background: #fff;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: #111827;
+  font-weight: 700;
+}
+
 @media (min-width: 720px) {
   .hero-grid {
     grid-template-columns: 1fr 1fr;
